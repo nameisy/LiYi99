@@ -1,0 +1,278 @@
+@charset "utf-8";
+body,ul,li,dl,dt,dd,p,ol,h1,h2,h3,h4,h5,h6,form,img,table,fieldset,legend,form{margin:0; padding:0;}
+ul,li,ol{list-style:none;}
+img,fieldset{border:0; }
+img{display:block;}
+a{text-decoration:none; color:#333;}
+h1,h2,h3,h4,h5,h6{font-weight:100;}
+body{ font-family:"微软雅黑";}
+input,a{outline:none;}
+
+@mixin public{
+	width:1200px ;
+	margin: 0 auto;
+}
+
+/*----------------------顶部-------------------------*/ 
+#top{
+	height: 40px;
+	width: 100%;
+	background: url(../img/1451455083012.png);
+}
+
+
+/*----------------------头部-------------------------*/ 
+#header{
+	@include public;
+	height: 32px;
+	font-size: 12px;
+	.header_left{
+		float: left;
+		line-height: 32px;
+		span{
+			margin: 0 10px;
+		}
+	}
+	.header_right{
+		float: right;
+		line-height: 32px;
+		margin-right: 48px;
+		li{
+			float: left;
+			a:hover{
+				color: red;
+				text-decoration: underline;
+			}
+		}
+		.enter,.register{
+			margin: 0 7px;
+			margin-right: 1px solid #999;
+		}
+		.tow_menu{
+			box-sizing: border-box;
+			margin-left: 12px;
+			position: relative;
+			border: solid 1px #fff;
+			border-bottom: 0;
+			span{
+				margin: 0px 4px;
+			}
+			.h_menu{
+				position: absolute;
+				top: 31px;
+				right: -1px;
+				width: 81px;
+				height: 100px;
+				background: #fff;
+				border: solid 1px #999;
+				border-top: 0;
+				display: none;
+				li{
+					width: 100%;
+					padding-left: 14px;
+					line-height: 24px;
+				}
+			}
+		}
+		.shopping{
+			margin-right: 10px ;
+			span{
+				margin: 0px 4px;
+			}
+		}
+		.header_same{
+			margin: 0px 8px;
+		}
+	}
+}
+
+
+/*----------------------搜索-------------------------*/ 
+#search_wrap{border-top: 1px solid #eee;}
+#search{
+	@include public;
+	height: 98px;
+	#logo{
+		float: left;
+	}
+	.search_center{
+		float: left;
+		form{
+			width: 374px;
+			height: 38px;
+			margin-top: 32px;
+			.s_sec{
+				width: 334px;
+				height: 38px;
+				border: 2px solid red;
+				float: left;
+			}
+			.s_btn{
+				width: 40px;
+				height: 38px;
+				border: 2px solid red;
+				background: red;
+				float: right;
+			}
+		}
+	}
+	.search_right{
+		float: right;
+		margin-top: 8px;
+	}
+}
+
+
+/*----------------------nav-------------------------*/ 
+#nav_wrap{
+	background: red;
+}
+#nav{
+	@include public;
+	height: 40px;
+	background: red;
+	color: #fff;
+	ul{
+		.nav_fixedmenu{
+				line-height: 40px;
+				width: 168px;
+				background:#f42630;
+				text-align: center;
+				margin-right: 18px;
+				border-right:solid 1px #999 ;
+				border-left:solid 1px #999 ;
+		}
+		li{
+			float: left;
+			a{
+				color: #fff;
+				display: block;
+				height: 40px;
+				line-height: 40px;
+				text-align: center;
+				padding: 0 16px;
+				&:hover{
+					background:#f42630;
+				}
+			}
+		}
+	}
+}
+
+/*----------------------lists-------------------------*/ 
+#lists_wrap{
+	border-top: solid 1px #6c6c6c;
+	border-bottom: solid 1px #6c6c6c;
+	margin-top: 20px;
+}
+#lists{
+	@include public;
+	height: 200px;
+	padding-top: 22px;
+	.list_1{
+		width: 740px;
+		margin-left:130px;
+		float:left;
+		ul{
+			float: left;
+			width: 20%;
+			a{
+				font-size: 12px;
+				&:hover{
+					color: red;
+					text-decoration: underline;
+				}
+			}
+			.list_title{
+				height: 35px;
+				img{
+					float: left;
+					margin-right: 7px;
+				}
+				a{
+					float: left;
+					line-height: 35px;
+					font-size: 16px;
+				}
+			}
+			.list{
+				text-indent: 40px;
+			}
+		}
+	}
+	.twm{
+		width: 125px;
+		float: left;
+		margin-left: 80px;
+		img{
+			width: 125px;
+			height: 125px;
+		}
+		dd{
+			font-size: 12px;
+			color: #6c6c6c;
+			line-height: 40px;
+			text-align: center;
+		}
+	}
+	
+}
+/*----------------------links-------------------------*/ 
+#links{
+	@include public;
+	height: 162px;
+	text-align: center;
+	.aboutus{
+		padding: 42px 0;
+		a{
+			font-size: 12px;
+			color: #6c6c6c;
+			&:hover .us{
+				color: red;
+				text-decoration: underline;
+			}
+			span{
+				padding: 6px;
+			}
+		}
+	}
+	.friendslinks{
+		font-size: 12px;
+		color: #6c6c6c;
+		line-height: 30px;
+		a{
+			font-size: 12px;
+			color: #6c6c6c;
+			&:hover .us{
+				color: red;
+				text-decoration: underline;
+			}
+		}
+		.us{
+			padding: 0 16px;
+		}
+	}
+}
+
+/*----------------------footer-------------------------*/ 
+#footer{
+	@include public;
+	padding-left: 108px;
+	font-size: 12px;
+	color: #6c6c6c;
+	p{
+		line-height: 26px;
+	}
+}
+/*----------------------bottom-------------------------*/ 
+#bottom{
+	height: 108px;
+	text-align: center;
+	margin-top: 20px;
+	a{
+		display: inline-block;
+		width: 123px;
+		height: 40px;
+		margin-right: 25px;
+	}
+}
