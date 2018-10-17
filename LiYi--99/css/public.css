@@ -146,8 +146,8 @@ input, a {
 
 /*----------------------lists-------------------------*/
 #lists_wrap {
-  border-top: solid 1px #6c6c6c;
-  border-bottom: solid 1px #6c6c6c;
+  border-top: solid 1px #eee;
+  border-bottom: solid 1px #eee;
   margin-top: 20px; }
 
 #lists {
