@@ -80,20 +80,24 @@
 		position: relative;
 		.ltbtn,.rtbtn{
 			position: absolute;
-			width: 40px;
-			height: 40px;
-			background: blue;
+			width: 60px;
+			height: 60px;
 			color: #fff;
 			top: 0;
 			bottom: 0;
 			margin: auto;
 			display: none;
+			opacity: .5;
 		}
 		.ltbtn{
 			left: 0;
+			background: url(../img/btn.gif) no-repeat;
+			margin-left: 10px;
 		}
 		.rtbtn{
 			right: 0;
+			background: url(../img/btn.gif) no-repeat 0 -60px;
+			margin-right: 10px;
 		}
 		ul{
 			position: absolute;
