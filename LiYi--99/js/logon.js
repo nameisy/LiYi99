@@ -43,7 +43,7 @@ var $n_getran = $("#n_verify").parent().find("a");
 //获取随机数所在的位置
 var $p_random = $("#p_verify+i");
 var $n_random = $("#n_verify").parent().find("i");;
-console.log($n_random );
+
 //初始化随机数
 verify($p_random);
 verify($n_random);
@@ -61,3 +61,30 @@ function verify($obj){
 	var ran = num * num;
 	$obj.html(ran);
 }
+
+//获取提交按钮
+var $btn = $("#num_sub");
+$btn.click(function(){
+	var $uname = $("#num_phone").val();
+	var $upwd = $("#pwd").val();
+	var $num = $("#n_verify").val();
+	var $num_2 = $("#n_verify").parent().find("i").html();
+	console.log($num);
+	console.log($num_2);
+	console.log($upwd);
+	$.get("php/logon.php","uname="+ $uname + "&&upwd=" + $upwd ,function(data){
+		if(data){
+			if($num == $num_2){
+				var json = {
+					"name" : $uname
+				}
+				setCookie("LiYi_name",JSON.stringify(json));
+				location.href = "index.html";
+			}else{
+				alert("ffff");
+			}
+		}
+	})
+
+	
+})
