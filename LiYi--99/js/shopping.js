@@ -84,3 +84,22 @@ var $btn = $(".lbtn");
 $btn.click(function(){
 	location.href = "index.html";
 })
+
+//获取会员名
+//调用函数 获取key为LiYi_name的cookie 数据
+var arr = getCookie("LiYi_name");
+var name = arr.name;
+var $enter = $(".notName");
+var $register = $(".show_2");
+
+
+if(eval(name)){
+	$enter.remove();
+	// console.log($register)
+	$register.css({
+		display : 'block'
+	})
+	$register.find(".user").html("欢迎您");
+	$register.find(".user").css("paddingRight","10px");
+	$register.find(".user").append(`<a href="javascript:;" style="color:red">${name}</a>`)
+}

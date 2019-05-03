@@ -149,4 +149,17 @@ $oA.each(function(){
 	$(this).html(str);
 })
 
+//获取会员名
+//调用函数 获取key为LiYi_name的cookie 数据
+var arr = getCookie("LiYi_name");
+var name = arr.name;
+var $enter = $(".enter");
+var $register = $(".register");
 
+
+if(eval(name)){
+	$enter.remove();
+	$register.find("span").html("欢迎您");
+	$register.find("span").css("paddingRight","10px");
+	$register.find("a").html(name);
+}
